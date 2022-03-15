@@ -1,0 +1,102 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'node-blogchain'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=node-blogchain"
+                ],
+                "filter": {
+                    "name": "node-blogchain",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'node-blogchain'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=node-blogchain",
+                    "--package=node-blogchain",
+                ],
+                "filter": {
+                    "name": "node-blogchain",
+                    "kind": "bin"
+                }
+            },
+            "args": ["--tmp", "--dev"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'node-blogchain'",
+            "cargo": {
+                "args": [
+                    "--tmp",
+                    "--dev",
+                    "--bin=node-blogchain",
+                    "--package=node-blogchain"
+                ],
+                "filter": {
+                    "name": "node-blogchain",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'node-blogchain-runtime'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=node-blogchain-runtime"
+                ],
+                "filter": {
+                    "name": "node-blogchain-runtime",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'pallet-blogchain'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=pallet-blogchain"
+                ],
+                "filter": {
+                    "name": "pallet-blogchain",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
